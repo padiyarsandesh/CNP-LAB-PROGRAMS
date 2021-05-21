@@ -52,6 +52,5 @@ if(count==5)
 output[j]='\0';
 printf("The destuffed output is %s \n",output);
 return 0;
-
 }
 
