@@ -130,16 +130,18 @@ int main()
     }
     rows=len/l;
     char **decrypted = (char **)malloc((rows) * sizeof(char *));
-    for (int i=0; i<keylen; i++)
+    for (int i=0; i<rows; i++)
          decrypted[i] = (char *)malloc((l+1) * sizeof(char));
     int k=0;
     for(int i=0;i<l;i++)
     {
+        
         for(int j=0;j<rows;j++)
         {
             decrypted[j][i]=data[k];
             k++;
         }
+        
     }
     
 
@@ -160,31 +162,4 @@ int main()
 
 free(deckeyIdx);
 free(decrypted);
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
 }
